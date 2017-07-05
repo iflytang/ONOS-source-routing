@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0" immediate="true" name="org.test.sourceRouting.SimpleSourceRouting_backup">
+    <implementation class="org.test.sourceRouting.SimpleSourceRouting_backup"/>
+    <property name="service.pid" value="org.test.sourceRouting.SimpleSourceRouting_backup"/>
+    <reference name="flowTableService" interface="org.onosproject.net.table.FlowTableService" cardinality="1..1" policy="static" bind="bindFlowTableService" unbind="unbindFlowTableService"/>
+    <reference name="flowTableStore" interface="org.onosproject.net.table.FlowTableStore" cardinality="1..1" policy="static" bind="bindFlowTableStore" unbind="unbindFlowTableStore"/>
+    <reference name="flowRuleService" interface="org.onosproject.net.flow.FlowRuleService" cardinality="1..1" policy="static" bind="bindFlowRuleService" unbind="unbindFlowRuleService"/>
+    <reference name="deviceAdminService" interface="org.onosproject.net.device.DeviceAdminService" cardinality="1..1" policy="static" bind="bindDeviceAdminService" unbind="unbindDeviceAdminService"/>
+    <reference name="coreService" interface="org.onosproject.core.CoreService" cardinality="1..1" policy="static" bind="bindCoreService" unbind="unbindCoreService"/>
+    <reference name="packetService" interface="org.onosproject.net.packet.PacketService" cardinality="1..1" policy="static" bind="bindPacketService" unbind="unbindPacketService"/>
+</scr:component>
